@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9D15B68-ADBE-44F4-B499-CF3B7A93965D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RetailConnectPOS</RootNamespace>
+    <AssemblyName>RetailConnectPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Configuration, Version=0.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Configuration.0.1.3\lib\net35\Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CurveButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\MetroCurveButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\PictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmCashier.Designer.cs">
+      <DependentUpon>frmCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmManager.Designer.cs">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSplash\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSplash\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSplash\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSplash\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AR.cs" />
+    <Compile Include="Model\CASHIO.cs" />
+    <Compile Include="Model\CCCharge.cs" />
+    <Compile Include="Model\COUNTER.cs" />
+    <Compile Include="Model\CRECEIPT.cs" />
+    <Compile Include="Model\CREDIT.cs" />
+    <Compile Include="Model\CURR.cs" />
+    <Compile Include="Model\CUSPRICE.cs" />
+    <Compile Include="Model\CUSTOMER.cs" />
+    <Compile Include="Model\DBModelContext.cs" />
+    <Compile Include="Model\DEFPRICE.cs" />
+    <Compile Include="Model\INVFOOTER.cs" />
+    <Compile Include="Model\INVNUM.cs" />
+    <Compile Include="Model\OPENDRAWER_LOG.cs" />
+    <Compile Include="Model\PATH.cs" />
+    <Compile Include="Model\POS.cs" />
+    <Compile Include="Model\POSKEYCODE.cs" />
+    <Compile Include="Model\POSRECEIPT1.cs" />
+    <Compile Include="Model\POSRECEIPT2.cs" />
+    <Compile Include="Model\PRICETYPE.cs" />
+    <Compile Include="Model\PROPOINT.cs" />
+    <Compile Include="Model\PUSER.cs" />
+    <Compile Include="Model\PUSER_BCK.cs" />
+    <Compile Include="Model\RIREASON.cs" />
+    <Compile Include="Model\SALE.cs" />
+    <Compile Include="Model\SHIFTLOG.cs" />
+    <Compile Include="Model\STAFF.cs" />
+    <Compile Include="Model\STOCK.cs" />
+    <Compile Include="Model\STOCK1.cs" />
+    <Compile Include="Model\STORE.cs" />
+    <Compile Include="Model\S_ATTENDANCE.cs" />
+    <Compile Include="Model\TSALE.cs" />
+    <Compile Include="Model\UPC.cs" />
+    <Compile Include="Model\VAT_IN.cs" />
+    <Compile Include="Options\frmCheckPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmCheckPrice.Designer.cs">
+      <DependentUpon>frmCheckPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\frmCreditSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmCreditSales.Designer.cs">
+      <DependentUpon>frmCreditSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\frmPOSReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmPOSReport.Designer.cs">
+      <DependentUpon>frmPOSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\frmPrintInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmPrintInvoice.Designer.cs">
+      <DependentUpon>frmPrintInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\frmSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmSalesReturn.Designer.cs">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\frmSeekResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\frmSeekResume.Designer.cs">
+      <DependentUpon>frmSeekResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options\Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosLocalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PosLocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsDebug\frmDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDebug\frmDebug.Designer.cs">
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsDebug\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDebug\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tab\frmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tab\frmPassword.Designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmCashier.resx">
+      <DependentUpon>frmCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmManager.resx">
+      <DependentUpon>frmManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSplash\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSplash\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmCheckPrice.resx">
+      <DependentUpon>frmCheckPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmCreditSales.resx">
+      <DependentUpon>frmCreditSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmPOSReport.resx">
+      <DependentUpon>frmPOSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmPrintInvoice.resx">
+      <DependentUpon>frmPrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmSalesReturn.resx">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\frmSeekResume.resx">
+      <DependentUpon>frmSeekResume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options\Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard\Report1.rdlc" />
+    <EmbeddedResource Include="SettingsDebug\frmDebug.resx">
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDebug\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab\frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PosLocalDataSet.xsc">
+      <DependentUpon>PosLocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PosLocalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PosLocalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PosLocalDataSet.xss">
+      <DependentUpon>PosLocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppConfig\" />
+    <Folder Include="AppProgram\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
